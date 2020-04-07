@@ -1,3 +1,3 @@
 # virtual-keyboard
-1. npm install
-run eslint: npm run lint
+1. npm install 
+2. run eslint: npm run lint

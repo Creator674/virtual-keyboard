@@ -4,7 +4,6 @@ let arr = [];
 let isEng = false;
 let ShiftIsTrue = false;
 
-
 const doc = document;
 const keyboard = doc.createElement('div');
 const textArea = doc.createElement('textarea');
@@ -348,3 +347,49 @@ if (isEng) {
 } else {
   localStorage.setItem('eng', 'false');
 }
+
+const audioBtn = doc.createElement('button');
+const audioImg = doc.createElement('img');
+
+audioImg.src = './assets/volume.svg';
+audioImg.alt = 'sound-input';
+audioBtn.className = 'audio-button';
+audioBtn.appendChild(audioImg);
+toHTML(audioBtn);
+
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new window.SpeechRecognition();
+recognition.interimResults = true;
+
+recognition.addEventListener('result', (e) => {
+  const transcript = Array.from(e.results)
+    .map((result) => result[0])
+    .map((result) => result.transcript)
+    .join('');
+
+
+  if (e.results[0].isFinal) {
+    const words = transcript.split('');
+    if (ShiftIsTrue) {
+      words.forEach((elem, index) => {
+        words[index] = words[index].toUpperCase();
+      });
+    }
+    arr = arr.concat(words);
+    textArea.value = arr.join('');
+    audioBtn.style.backgroundColor = 'transparent';
+    recognition.stop();
+    audioBtn.blur();
+  }
+});
+
+audioBtn.addEventListener('click', () => {
+  if (isEng) {
+    recognition.lang = 'en-US';
+  } else {
+    recognition.lang = 'ru';
+  }
+  recognition.start();
+  audioBtn.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+});

@@ -375,6 +375,10 @@ recognition.addEventListener('result', (e) => {
       words.forEach((elem, index) => {
         words[index] = words[index].toUpperCase();
       });
+    } else {
+      words.forEach((elem, index) => {
+        words[index] = words[index].toLocaleLowerCase();
+      });
     }
     arr = arr.concat(words);
     textArea.value = arr.join('');

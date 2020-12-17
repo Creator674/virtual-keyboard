@@ -1,0 +1,151 @@
+body {
+    width: 99%;
+    height: 100%;
+    background-color: rgb(255, 232, 127);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.textArea {
+    width: 900px;
+    height: 400px;
+    background-color: rgba(241, 132, 8, 0.5);
+    border:none;
+    font-size:30px;
+    color:rgb(240, 142, 51);
+    user-select: none;
+    resize: none;
+    border-radius: 1rem;
+}
+.keyboard {
+    width: 630px;
+    height: 300px;
+    background-color:rgb(238, 166, 32);
+    border:none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    user-select: none;
+    border-radius: 1rem;
+}
+.keyboard > * {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    border:1px solid black;
+    color:rgb(221, 201, 25);
+    background-color: rgb(146, 52, 9);
+    outline: none;
+    transition: .1s ease-in;
+    font-weight: bold;
+    user-select: none;
+    font-size: 18px;
+
+}
+.BasicButton{
+    border-radius:25%;
+    width:35px;
+    height:35px;
+    margin:5px 0 0 5px;
+}
+.Backspace{
+    border-radius:15%;
+    width:100px;
+    height:35px;
+    margin:5px 5px 0 5px;
+}
+.Tab {
+    border-radius:15%;
+    width:60px;
+    height:35px;
+    margin:5px 0px 0 5px;
+}
+.Backslash{
+    border-radius:15%;
+    width:70px;
+    height:35px;
+    margin:5px 5px 0 5px;
+}
+.CapsLock{
+    border-radius:15%;
+    width:85px;
+    height:35px;
+    margin:5px 5px 0 5px;
+}
+.Enter{
+    border-radius:15%;
+    width:80px;
+    height:35px;
+    margin:5px 5px 0 5px;
+}
+.ShiftLeft{
+    border-radius:15%;
+    width:105px;
+    height:35px;
+    font-size: 22px;
+    margin:5px 0px 0 5px;
+}
+.ShiftRight{
+    border-radius:15%;
+    width:105px;
+    height:35px;
+    font-size: 22px;
+    margin:5px 5px 0 5px;
+}
+.Meta{
+    border-radius:25%;
+    width:45px;
+    height:35px;
+    margin:5px 0 0 5px;
+}
+.ControlLeft{
+    border-radius:15%;
+    width:50px;
+    height:35px;
+    margin:5px 0px 0 5px;
+}
+.ControlRight{
+    border-radius:15%;
+    width:50px;
+    height:35px;
+    margin:5px 5px 0 5px;
+
+}
+.Alt{
+    border-radius:15%;
+    width:50px;
+    height:35px;
+    margin:5px 0px 0 5px;
+}
+.Space{
+    border-radius:15%;
+    width:305px;
+    height:35px;
+    margin:5px 0px 0 5px;
+}
+.rotate {
+    color: black;
+}
+.audio-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 10px;
+}
+p{
+    margin: 0;
+    padding: 0;
+    color: coral;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

@@ -1,0 +1,9 @@
+{
+    "extends": ["airbnb/base"],
+    "globals": {
+        "localStorage": true
+    },
+    "env": {
+        "browser": true
+    }
+}
